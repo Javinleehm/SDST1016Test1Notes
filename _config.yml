@@ -1,9 +1,7 @@
 title: SDST1016 Data Science 101 Test Notes
 description: Revision notes for SDST1016 Data Science 101 based on lecture transcriptions
-theme: jekyll-theme-minimal
 
 markdown: kramdown
 encoding: UTF-8
 
-# GitHub Pages settings
 show_downloads: true
