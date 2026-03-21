@@ -15,6 +15,7 @@ title: SDST1016 Data Science 101 - Test 1 Notes
 
 | File | Chapter | Topics |
 |------|---------|--------|
+| [`00_REVIEW_SHEET.md`](00_REVIEW_SHEET.md) | All | Quick review sheet with key formulas and concepts |
 | [`01_Data_Science_Introduction.md`](01_Data_Science_Introduction.md) | Ch 1 | What is data science, 6 steps, correlation vs causation, confounding variables |
 | [`02_Data_Processing.md`](02_Data_Processing.md) | Ch 2 | Problem definition (OST), data collection (SQE), data cleaning (outliers, normalization, NLP/LSA), vaccine efficacy |
 | [`03_Data_Exploration.md`](03_Data_Exploration.md) | Ch 3 | Summary statistics, fancy charts, pivot tables, confusion matrix (accuracy/precision/recall/F1) |
