@@ -27,25 +27,25 @@ A **good problem definition** must satisfy three criteria, remembered as **OST**
 
 The lecturer spent significant time on this. You **must** know this formula.
 
-$$VE = 1 - \frac{P(\text{infection} \mid \text{vaccinated})}{P(\text{infection} \mid \text{placebo})}$$
+$$VE = 1 - \frac{P(\text{infection} \mid \text{vaccinated})}{P(\text{infection} \mid \text{placebo})}$$$
 
 ### Example: Pfizer COVID Vaccine
 - 8 confirmed infections in vaccinated group (n subjects)
 - 162 confirmed infections in placebo group (n subjects)
 - Same sample size → N cancels
 
-$$\widehat{VE} = 1 - \frac{8/n}{162/n} = 1 - \frac{8}{162} \approx 0.9506 = 95\%$$
+$$$\widehat{VE} = 1 - \frac{8/n}{162/n} = 1 - \frac{8}{162} \approx 0.9506 = 95\%$$$
 
 ### What happens with unconfirmed cases?
 If you include suspected (unconfirmed) cases:
 - Vaccinated: 8 confirmed + 1594 suspected = 1602 total
 - Placebo: 162 confirmed + 1816 suspected = 1978 total
 
-$\widehat{VE} = 1 - \frac{1602/n}{1978/n} = 1 - \frac{1602}{1978} \approx 0.19 = 19\%$
+$$\widehat{VE} = 1 - \frac{1602/n}{1978/n} = 1 - \frac{1602}{1978} \approx 0.19 = 19\%$
 
 **Therefore, the general efficacy formula (Relative Risk Reduction) is:**
 
-$ Efficacy = 1 - \frac{Risk_{\text{test group}}}{Risk_{\text{baseline}}} $
+$ Efficacy = 1 - \\frac{Risk_{\text{test group}}}{Risk_{\text{baseline}}} $
 
 > The lesson: definition of what counts as a "case" massively changes the result. Be transparent about your data.
 
@@ -96,9 +96,9 @@ An observation that falls **outside the normal sample range**, defined using the
 **Step 1:** Sort data in ascending order.
 
 **Step 2:** Calculate the quartile positions using:
-$$Q1 \text{ position} = \frac{(n+1) \times 1}{4}$$
-$$\text{Median position} = \frac{(n+1) \times 2}{4}$$
-$$Q3 \text{ position} = \frac{(n+1) \times 3}{4}$$
+$$$Q1 \text{ position} = \frac{(n+1) \times 1}{4}$$$
+$$$\text{Median position} = \frac{(n+1) \times 2}{4}$$$
+$$$Q3 \text{ position} = \frac{(n+1) \times 3}{4}$$$
 
 **Step 3:** Use **linear interpolation** to find the exact value if position is not an integer.
 
@@ -107,11 +107,11 @@ $$Q3 \text{ position} = \frac{(n+1) \times 3}{4}$$
 > Q1 = 2nd value + 0.75 × (3rd value - 2nd value)
 
 **Step 4:** Calculate IQR:
-$$IQR = Q3 - Q1$$
+$$$IQR = Q3 - Q1$$$
 
 **Step 5:** Calculate the limits:
-$$\text{Lower limit} = Q1 - 1.5 \times IQR$$
-$$\text{Upper limit} = Q3 + 1.5 \times IQR$$
+$$$\text{Lower limit} = Q1 - 1.5 \times IQR$$$
+$$$\text{Upper limit} = Q3 + 1.5 \times IQR$$$
 
 **Step 6:** Any observation **below the lower limit** or **above the upper limit** is an **outlier**.
 
@@ -171,7 +171,7 @@ Methods:
 
 **Purpose:** Scale data so that mean = 0, standard deviation = 1.
 
-$$Z_i = \frac{X_i - \bar{X}}{\sigma}$$
+$$$Z_i = \frac{X_i - \bar{X}}{\sigma}$$$
 
 Where:
 - $X_i$ = the observation
@@ -186,7 +186,7 @@ Where:
 
 **Purpose:** Scale data into the range [0, 1].
 
-$$Y_i = \frac{X_i - \min(X)}{\max(X) - \min(X)}$$
+$$$Y_i = \frac{X_i - \min(X)}{\max(X) - \min(X)}$$$
 
 **Result:** Smallest value → 0, Largest value → 1.
 
@@ -231,7 +231,7 @@ Create a matrix where:
 
 Decompose the matrix A:
 
-$$A = U \cdot \Lambda \cdot V^T$$
+$$$A = U \cdot \Lambda \cdot V^T$$$
 
 Where:
 - **U** = word eigenvectors matrix (M × P), used for **word vectors**
@@ -244,7 +244,7 @@ Dimensions: M = number of keywords, N = number of documents, P = number of eigen
 
 **Eigenvalues are arranged in descending order.** The formula for the percentage of information captured by the top R eigenvalues:
 
-$$\text{Variance captured} = \frac{\sum_{i=1}^{R} \lambda_i^2}{\sum_{i=1}^{P} \lambda_i^2}$$
+$$$\text{Variance captured} = \frac{\sum_{i=1}^{R} \lambda_i^2}{\sum_{i=1}^{P} \lambda_i^2}$$$
 
 > Example: If we keep only the top 2 eigenvalues and this ratio = 90%, then we capture 90% of the information while discarding the other 10%.
 
@@ -256,12 +256,12 @@ To reduce dimensions (e.g., to 2D for plotting), keep only the top R eigenvalues
 - **U₂** = first 2 columns of U
 
 **Document vectors** (coordinates of each document in 2D space):
-$$\text{Document vectors} = \Lambda_2 \cdot V_2^T$$
+$$$\text{Document vectors} = \Lambda_2 \cdot V_2^T$$$
 
 Result is a 2×N matrix — each column is one document's (X, Y) coordinate.
 
 **Word vectors** (coordinates of each keyword in 2D space):
-$$\text{Word vectors} = U_2 \cdot \Lambda_2$$
+$$$\text{Word vectors} = U_2 \cdot \Lambda_2$$$
 
 Result is an M×2 matrix — each row is one keyword's (X, Y) coordinate.
 
@@ -280,7 +280,7 @@ The lecturer said he can ask:
 
 **Q1:** Given eigenvalues λ₁, λ₂, λ₃, λ₄, λ₅ — if I keep the top 2, what % of information is captured?
 
-$$\text{Answer} = \frac{\lambda_1^2 + \lambda_2^2}{\lambda_1^2 + \lambda_2^2 + \lambda_3^2 + \lambda_4^2 + \lambda_5^2} \times 100\%$$
+$$$\text{Answer} = \frac{\lambda_1^2 + \lambda_2^2}{\lambda_1^2 + \lambda_2^2 + \lambda_3^2 + \lambda_4^2 + \lambda_5^2} \times 100\%$$$
 
 **Q2:** Given Λ₂ and V₂^T, what are the (X, Y) coordinates of Document 3?
 
@@ -301,3 +301,6 @@ Remember the patterns for Steps 1–3:
 | Problem Definition | **OST** (Objective, Specific, Timeline) | Vaccine Efficacy |
 | Data Collection | **SQE** (Source, Quality, Ethics = Privacy + Consent) | None |
 | Data Cleaning | Outliers (IQR), Standardisation, Normalisation, Imputation, NLP/LSA | All of the above |
+
+
+
