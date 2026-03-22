@@ -41,7 +41,11 @@ If you include suspected (unconfirmed) cases:
 - Vaccinated: 8 confirmed + 1594 suspected = 1602 total
 - Placebo: 162 confirmed + 1816 suspected = 1978 total
 
-$$\widehat{VE} = 1 - \frac{1602/n}{1978/n} = 1 - \frac{1602}{1978} \approx 0.19 = 19\%$$
+$\widehat{VE} = 1 - \frac{1602/n}{1978/n} = 1 - \frac{1602}{1978} \approx 0.19 = 19\%$
+
+**Therefore, the general efficacy formula (Relative Risk Reduction) is:**
+
+$ Efficacy = 1 - \frac{Risk_{\text{test group}}}{Risk_{\text{baseline}}} $
 
 > The lesson: definition of what counts as a "case" massively changes the result. Be transparent about your data.
 
