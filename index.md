@@ -1,5 +1,6 @@
 ---
 title: SDST1016 Data Science 101 - Test 1 Notes
+layout: default
 ---
 
 # SDST1016 — Data Science 101 Revision Notes
