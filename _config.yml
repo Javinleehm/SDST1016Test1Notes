@@ -4,4 +4,7 @@ description: Revision notes for SDST1016 Data Science 101 based on lecture trans
 markdown: kramdown
 encoding: UTF-8
 
+kramdown:
+  math_engine: mathjax
+
 show_downloads: true
