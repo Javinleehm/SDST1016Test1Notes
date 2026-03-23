@@ -395,16 +395,16 @@ Three bags:
 
 You randomly pick a bag and draw one coin. It's gold. What's the probability the remaining coin is also gold?
 
-**= P(you picked Bag A | drew gold coin)**
+**= P(you picked Bag A \| drew gold coin)**
 
 Using Bayes:
 $$P(A | G) = \frac{P(G|A) \cdot P(A)}{P(G|A) \cdot P(A) + P(G|B) \cdot P(B) + P(G|C) \cdot P(C)}$$
 
 $$= \frac{1 \times \frac{1}{3}}{1 \times \frac{1}{3} + 0 \times \frac{1}{3} + \frac{1}{2} \times \frac{1}{3}} = \frac{\frac{1}{3}}{\frac{1}{2}} = \mathbf{\frac{2}{3}}$$
 
-P(B|G) = 0 (no gold in Bag B)
+P(B\|G) = 0 (no gold in Bag B)
 
-P(C|G) = 1 − 2/3 − 0 = **1/3** (by elimination)
+P(C\|G) = 1 − 2/3 − 0 = **1/3** (by elimination)
 
 > Interesting: people instinctively say 1/2, but the correct answer is 2/3.
 
@@ -420,7 +420,7 @@ Insomnia study — patients received drug or placebo:
 | No Relapse | 40 | 31 | 71 |
 | Total | 73 | 67 | 140 |
 
-**P(received placebo | no relapse):**
+**P(received placebo \| no relapse):**
 
 $$P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{31/140}{71/140} = \frac{31}{71} = 0.4366$$
 
