@@ -1,18 +1,20 @@
 ---
-title: SDST1016 Data Science 101 - Test 1 Notes
+title: SDST1016 Data Science 101 - Complete Notes
 layout: default
 ---
 
 # SDST1016 — Data Science 101 Revision Notes
 
-> **Important:** These notes are based **exclusively on what was taught in lecture** (transcriptions Jan 20 – Mar 20). The lecturer explicitly stated: *"I only test things I said in lesson."*
+> **Important:** These notes are based **exclusively on what was taught in lecture** (transcriptions Jan 20 – Apr 17). The lecturer explicitly stated: *"I only test things I said in lesson."*
 >
 > Test 1 (March 24) covers **Chapters 1–4 only**.  
-> Test 2 covers **Chapters 5–6**.
+> Test 2 (Late April) covers **Chapters 5–10**.
 
 ---
 
 ## 📚 Files in This Folder
+
+### Test 1 Coverage (Chapters 1–4)
 
 | File | Chapter | Topics |
 |------|---------|--------|
@@ -21,8 +23,17 @@ layout: default
 | [`02_Data_Processing.md`](02_Data_Processing.md) | Ch 2 | Problem definition (OST), data collection (SQE), data cleaning (outliers, normalization, NLP/LSA), vaccine efficacy |
 | [`03_Data_Exploration.md`](03_Data_Exploration.md) | Ch 3 | Summary statistics, fancy charts, pivot tables, confusion matrix (accuracy/precision/recall/F1) |
 | [`04_Probability.md`](04_Probability.md) | Ch 4A+B | Basic probability, additive law, inclusion-exclusion, conditional probability, Bayes theorem, Monty Hall, birthday problem |
-| [`05_Normal_Distribution_CI.md`](05_Normal_Distribution_CI.md) | Ch 5 | Normal distribution, percentile calculations, CLT, confidence intervals, sample size, randomized response technique |
-| [`06_Hypothesis_Testing.md`](06_Hypothesis_Testing.md) | Ch 6 | Z-test for proportions (3 cases), p-value meaning, binomial small-sample test, beta |
+
+### Test 2 Coverage (Chapters 5–10)
+
+| File | Chapter | Topics |
+|------|---------|--------|
+| [`05_Normal_Distribution_CI.md`](05_Normal_Distribution_CI.md) | Ch 5 | Normal distribution review, randomized response technique, zero-knowledge proof, linear interpolation |
+| [`06_Hypothesis_Testing.md`](06_Hypothesis_Testing.md) | Ch 6 | Z-test for proportions (3 cases), p-value meaning, binomial small-sample test, Type 2 error (β), power, paired comparison, Raven Paradox |
+| [`07_Regression.md`](07_Regression.md) | Ch 7A+B | Simpson's Paradox, Anscombe's Quartet, logistic regression formula, log odds ratio, supervised vs unsupervised learning |
+| [`08_Machine_Learning.md`](08_Machine_Learning.md) | Ch 8 | ROC curves (TPR, FPR, threshold), hierarchical clustering (single/average/complete linkage), dendrograms |
+| [`09_ML_Models.md`](09_ML_Models.md) | Ch 9 | Decision tree (entropy calculation, best split), Gini impurity, KNN (conceptual), K-means clustering (conceptual) |
+| [`10_Computational_Thinking.md`](10_Computational_Thinking.md) | Ch 10 | Traditional programming vs ML, transformer architecture, key AI terminology |
 
 ---
 
@@ -60,13 +71,29 @@ layout: default
 ### Hypothesis Testing
 - **Test statistic (proportion):** `Z = (p̂ − p₀) / √(p₀(1−p₀)/n)`
 - **Standard error:** `SE = √(p₀(1−p₀)/n)` — use **null hypothesis p₀**!
+- **Test statistic (mean):** `Z = (x̄ − μ) / (σ/√n)`
 - **Decision rule:** Reject H₀ if p-value < α (usually 0.05)
+- **Binomial probability:** `P(X=k) = C(n,k) × pᵏ × (1−p)ⁿ⁻ᵏ`
+- **Power:** `Power = 1 − β`
+
+### Regression
+- **Logistic regression:** `P = e^(β₀ + β₁X) / (1 + e^(β₀ + β₁X))`
+- **Log odds ratio:** `β₁ × (Xᵢ − Xⱼ)`
+- **Odds ratio:** `e^(β₁ × (Xᵢ − Xⱼ))`
+- **% Increase:** `(Odds Ratio − 1) × 100%`
+
+### Machine Learning
+- **Entropy:** `−p₁ × log₂(p₁) − p₂ × log₂(p₂)`
+- **log₂ calculation:** `log₂(x) = log(x) / log(2)`
+- **0 × log(0):** `= 0` (by convention)
+- **TPR:** `TP / (TP + FN)`
+- **FPR:** `FP / (FP + TN)`
 
 ---
 
 ## 🎯 What the Lecturer Tests
 
-Based on lecture emphasis:
+### Test 1 Topics
 1. **Calculation of Q1, Q3, IQR, outlier limits** — given a dataset
 2. **Standardization and normalization** — calculating z-scores and normalized values
 3. **Document/word vectors** — eigenvalue ratio, coordinates from reduced-rank matrix
@@ -74,9 +101,19 @@ Based on lecture emphasis:
 5. **Probability calculations** — P(A∪B), P(A|B), inclusion-exclusion with 3 events
 6. **Bayes theorem** — using the table method (fill in step-by-step)
 7. **Confusion matrix** — accuracy, precision, recall, F1-score
-8. **Confidence interval** — finding margin of error given sample proportion
-9. **Hypothesis testing** — calculate test stat, find p-value, make decision
-10. **Binomial p-value** — `P(X ≥ k | p = p₀)` for small sample tests
+
+### Test 2 Topics
+8. **Randomized response technique** — solve for P_gay given P(yes)
+9. **Normal table interpolation** — linear interpolation for more accurate p-values
+10. **Hypothesis testing (3 cases)** — calculate test stat, find p-value, make decision for right-tailed, left-tailed, two-tailed
+11. **Binomial p-value** — `P(X ≥ k | p = p₀)` for small sample tests
+12. **Type 2 error and power** — calculate β and 1−β
+13. **Logistic regression** — calculate probability, odds ratio, percentage increase
+14. **ROC curve** — calculate TPR, FPR for different thresholds
+15. **Hierarchical clustering** — single/average/complete linkage calculations
+16. **Decision tree entropy** — calculate entropy for each split, choose best split
+17. **Conceptual questions** — KNN vs K-means, supervised vs unsupervised, Simpson's Paradox, Anscombe's Quartet
+18. **Transformer terminology** — key terms and logical flow
 
 ---
 
@@ -85,8 +122,20 @@ Based on lecture emphasis:
 | Test | Date | Coverage |
 |------|------|----------|
 | Test 1 | March 24 (Tuesday in class) | Chapters 1–4 |
-| Test 2 | Late April | Chapters 5–6 |
+| Test 2 | Late April (Tuesday in class) | Chapters 5–10 |
 
 **Format:** Multiple choice (20–25 questions), 4 choices each (often choice D = "none of the above")  
 **Allowed:** Formula sheet (provided on Moodle), rough paper/calculator  
 **Location:** In-class, bring your laptop (Moodle test)  
+
+---
+
+## 💡 Study Tips from the Lecturer
+
+1. **Watch the recordings at 2-3x speed** to quickly review what was covered
+2. **The sample questions are very similar to the actual test** — just with different numbers
+3. **Bring rough paper** for calculations during the test
+4. **For hypothesis testing, always use the null hypothesis value** (not sample proportion) for standard error
+5. **Don't forget the minus sign** in entropy calculations
+6. **Check your frequency subtotals add to sample size** — easy way to catch mistakes
+7. **Choose your alternative hypothesis BEFORE looking at data** — otherwise you're cheating!
